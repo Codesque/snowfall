@@ -6,7 +6,7 @@ import random
 WIDTH = 900 
 HEIGHT = 700
 PIXEL = 50  
-COUNT = 0
+
 
 class Snow(pygame.sprite.Sprite): 
     def __init__(self , size : tuple) -> None:
@@ -26,7 +26,7 @@ class Snow(pygame.sprite.Sprite):
 
 
     def movement(self):   
-        global COUNT
+        
 
         self.rect.x += self.vx 
         self.rect.y += self.vy  
@@ -68,7 +68,7 @@ if __name__ == "__main__":
     all_sprites_list = pygame.sprite.Group() 
     clock = pygame.time.Clock()
 
-    for i in range(20): 
+    for i in range(40): 
         number = random.randint(20,75)  
         snow_size = (number , number)
         snowflake = Snow(snow_size)  
